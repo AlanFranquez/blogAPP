@@ -12,19 +12,19 @@ import jakarta.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     
     private String username;
-    private long password;
+    private String password;
     private List<Post> posts;
 
-    public User(String username, long password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
         this.posts = new ArrayList<>();
     }
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public class User {
         return this.username;
     }
 
-    public long getPassword() {
+    public String getPassword() {
         return this.password;
     }
 
