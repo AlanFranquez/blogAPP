@@ -1,4 +1,4 @@
-package com.classes;
+package com.blog.demo.classes;
 
 
 import jakarta.persistence.Entity;
@@ -14,12 +14,12 @@ public class Post {
     private long id;
 
     private String title;
-    private Byte[] image;
     private long content;
+
+    public Post() {};
 
     public Post(String title, Byte[] image, long content) {
         this.title = title;
-        this.image = image;
         this.content = content;
     }
 
@@ -27,9 +27,6 @@ public class Post {
         return this.title;
     }
 
-    public Byte[] image() {
-        return this.image;
-    }
 
     public long getContent() {
         return this.content;
